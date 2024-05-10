@@ -4,7 +4,21 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/src/main.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      h1 {
+        text-align: center;
+      }
+      h2 {
+        color: grey;
+        font-weight: lighter;
+        text-align: center;
+      }
+    </style>
 
     <title>Heatmap</title>
   </head>
@@ -15,10 +29,6 @@
     </div>
 
     <div id="svg-container"></div>
-
-    <!-- Absolute path for Vite -->
-    <!-- <script type="module" src="/src/starter.js"></script> -->
-    <!-- <script type="module" src="/src/viz.js"></script> -->
-    <script type="module" src="/src/viz_interaction.js"></script>
+    <script type="module" src="/src/starter.js"></script>
   </body>
 </html>
