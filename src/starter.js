@@ -225,17 +225,24 @@ window.addEventListener("resize", () => {
     .call(xAxis);
 
   // heatmap 업데이트
+
   rects
     .attr("x", (d) => xScale(d.year))
-    .attr("y", margin.top)
+    .attr("y", margin.top + 40)
     .attr("width", xScale.bandwidth())
-    .attr("height", height - margin.top - margin.bottom);
+    .attr("height", height - margin.top - margin.bottom - 200);
 
   rects1
     .attr("x", (d) => xScale(d.year))
     .attr("y", margin.bottom + 110)
     .attr("width", xScale.bandwidth())
     .attr("height", height - margin.top - margin.bottom - 200);
+
+  // rects1
+  //   .attr("x", (d) => xScale(d.year))
+  //   .attr("y", margin.bottom + 110)
+  //   .attr("width", xScale.bandwidth())
+  //   .attr("height", height - margin.top - margin.bottom - 200);
 
   // 레전드 업데이트
   legendRects
