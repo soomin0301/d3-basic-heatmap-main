@@ -33,7 +33,7 @@ const xScale = d3
 const colorScale = d3
   .scaleSequential()
   .domain([0.8, -0.8])
-  .interpolator(d3.interpolatePlasma);
+  .interpolator(d3.interpolateRgbBasis(["pink", "white", "skyblue"]));
 
 const xLegendScale = d3
   .scaleBand()
@@ -136,7 +136,7 @@ d3.csv("data/temperature-anomaly-data.csv").then((raw_data) => {
           document.documentElement.scrollTop;
 
       div
-        .html("year: " + d.year + "<br>avg:" + d.avg)
+        .html("Year: " + d.year + "<br>Avg:" + d.avg)
         .style("font-size", "8pt")
         .style("left", pageX + 10 + "px")
         .style("top", pageY - 15 + "px");
@@ -173,7 +173,7 @@ d3.csv("data/temperature-anomaly-data.csv").then((raw_data) => {
           document.documentElement.scrollTop;
 
       div
-        .html("year: " + d.year + "<br>avg:" + d.avg)
+        .html("Year: " + d.year + "<br>Avg:" + d.avg)
         .style("font-size", "8pt")
         .style("left", pageX + 10 + "px")
         .style("top", pageY - 15 + "px");
@@ -205,7 +205,7 @@ d3.csv("data/temperature-anomaly-data.csv").then((raw_data) => {
     .attr("y", height - margin.bottom + 65)
     .text((d) => d3.format("0.1f")(d))
     .attr("class", "legend-labels")
-    .style("fill", (d) => (d >= 0.2 ? "#fff" : "#111"));
+    .style("fill", (d) => (d >= 1 ? "#fff" : "#111"));
 });
 
 ////////////////////////////  Resize  //////////////////////////////
