@@ -37,11 +37,3 @@ div.tooltip-data {
   pointer-events: none;
   font-size: 1.3rem;
 }
-
-.tooltip {
-  position: absolute;
-  padding: 5px;
-  background-color: yellow;
-  border: 1px solid black;
-  border-radius: 5px;
-}
